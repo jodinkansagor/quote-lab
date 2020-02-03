@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Quote from './Quote';
+import Button from './Button';
 
-describe('Quote component', () => {
+describe('Button component', () => {
   it('matches a snapshot', () => {
-    const wrapper = shallow(<Quote text="A QUOTE" source="My MOM" />);
+    const wrapper = shallow(<Button onClick={() => {}} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
