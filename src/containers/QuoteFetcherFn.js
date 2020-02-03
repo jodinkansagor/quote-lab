@@ -12,9 +12,10 @@ const QuoteFetcherFN = () => {
       .then(quote => setQuote(quote));
   }, []);
 
-  const handleClick = ({ target }) => {
-    setQuote(target.value);
-    console.log(target.value, 'TARGET DOT VALUE');
+
+  const handleClick = () => {
+    getFuturama()
+      .then(quote => setQuote(quote));
   };
 
   return (
