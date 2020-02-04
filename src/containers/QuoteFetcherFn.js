@@ -16,7 +16,7 @@ const QuoteFetcherFN = () => {
 
   const handleClick = () => {
     getFuturama()
-      .then(quote => setQuote(quote));
+      .then(newQuote => setQuote(newQuote));
   };
 
   return (
