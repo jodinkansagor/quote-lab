@@ -5,7 +5,7 @@ import { getFuturama } from '../services/getQuote';
 import styles from '../components/QuoteFetcherFN.css';
 
 const QuoteFetcherFN = () => {
-  const [quote, setQuote] = useState('');
+  const [quote, setQuote] = useState({});
 
 
   useEffect(() => {
