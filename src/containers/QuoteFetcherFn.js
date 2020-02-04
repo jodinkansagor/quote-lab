@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Button from '../components/Button';
 import Quote from '../components/Quote';
-import { getFuturama } from '../services/getQuote';
 import styles from '../components/QuoteFetcherFN.css';
+import { useQuotes } from '../hooks/quotes';
 
 const QuoteFetcherFN = () => {
-  const [quote, setQuote] = useState({});
-
-
-  useEffect(() => {
-    getFuturama()
-      .then(quote => setQuote(quote));
-  }, []);
-
+  const { quote, getNewQuote } = useQuotes();
 
   const handleClick = () => {
-    getFuturama()
-      .then(newQuote => setQuote(newQuote));
+    getNewQuote();
   };
+
 
   return (
     <section className={styles.quotePage}>
@@ -30,3 +23,9 @@ const QuoteFetcherFN = () => {
 };
 
 export default QuoteFetcherFN;
+
+
+
+
+
+
