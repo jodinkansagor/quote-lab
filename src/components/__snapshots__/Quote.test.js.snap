@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote component matches a snapshot 1`] = `
+<section
+  className="quoteBubble"
+>
+  <h4>
+    "
+    A QUOTE
+    " -- 
+    My MOM
+  </h4>
+</section>
+`;
