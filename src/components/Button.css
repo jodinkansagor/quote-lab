@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+
+button {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  border-radius: 5px;
+}
