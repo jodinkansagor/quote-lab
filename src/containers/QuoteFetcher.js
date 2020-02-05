@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getFuturama } from '../services/getQuote';
+import { getMarkov } from '../services/getQuote';
 import Quote from '../components/Quote';
 import Button from '../components/Button';
 
@@ -13,7 +13,7 @@ export default class QuoteFetcher extends Component {
   }
 
   fetch = () => {
-    return getFuturama()
+    return getMarkov()
       .then(quote => this.setState({ quote }));
   }
 

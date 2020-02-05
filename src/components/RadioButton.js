@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Radio = ({ value, label, onChange }) => (
   <section>
-    <input type="radio" name="sources" id={value} value={value} onChange={onChange}></input>
+    <input type="radio" name="sources" id={value} value={value} onClick={onChange}></input>
     <label htmlFor={value}>{label}</label>
   </section>
 );

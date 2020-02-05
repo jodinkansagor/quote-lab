@@ -8,23 +8,19 @@ import RadioButtons from '../../RadioButtons';
 
 
 const QuoteFetcherFN = () => {
-  const { quote, getNewQuote } = useQuotes();
-  const { sourceQuote, setCurrentSource } = useSourceQuotes('5e1e4ec52d2b701b5aaf0227');
-
-  const handleClick = () => {
-    setCurrentSource('');
-  };
+  const { sourceQuote, getSourceQuote } = useSourceQuotes('5e1e4ec52d2b701b5aaf0227');
 
   const radioButtons = [
     { label: 'Mark Twain', value: '5e1e4ec52d2b701b5aaf022a' },
     { label: 'Jane Austin', value: '5e1e4ec52d2b701b5aaf0226' },
     { label: 'Fyodor Dostoevsky', value: '5e1e4ec52d2b701b5aaf0227' },
     { label: 'Edgar Allan Poe', value: '5e1e4ec52d2b701b5aaf0228' },
-    { label: 'Lewis Carrol', value: '5e1e4ec52d2b701b5aaf0229' }
+    { label: 'Lewis Carrol', value: '5e1e4ec52d2b701b5aaf0229' },
+    { label: '?', value: ' '}
   ];
 
   const changeSource = ({ target }) => {
-    setCurrentSource(target.value);
+    getSourceQuote(target.value);
   };
 
   return (
@@ -32,17 +28,13 @@ const QuoteFetcherFN = () => {
       <h3>Markov Twain</h3>
       <p>Get yourself a random quote!</p>
       <Quote {...sourceQuote} />
-      <Button onClick={handleClick} />
       <RadioButtons radioButtons={radioButtons} onChange={changeSource} />
-      <h6>Note: Do not click on the same thing twice</h6>
     </section>
   );
 };
 
 export default QuoteFetcherFN;
 
-
-// const index = Math.floor(Math.random() * myArray.length)
 
 
 

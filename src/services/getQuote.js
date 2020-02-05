@@ -1,4 +1,4 @@
-export const getFuturama = () => {
+export const getMarkov = () => {
   return fetch('https://cors-anywhere.herokuapp.com/https://markovtwain.herokuapp.com/api/v1/results', {
     method: 'GET',
     headers: {
@@ -7,13 +7,13 @@ export const getFuturama = () => {
     }
   })
     .then(res => res.json())
-    .then(({ tweetText, source  }) => ({
+    .then(({ tweetText, source }) => ({
       text: tweetText,
       source: source.fullName,
     }));
 };
 
-export const getFuturamaWithSource = (source) => {
+export const getMarkovWithSource = (source) => {
   return fetch(`https://cors-anywhere.herokuapp.com/https://markovtwain.herokuapp.com/api/v1/results/${source}`, {
     method: 'GET',
     headers: {
@@ -22,7 +22,7 @@ export const getFuturamaWithSource = (source) => {
     }
   })
     .then(res => res.json())
-    .then(({ tweetText, source  }) => ({
+    .then(({ tweetText, source }) => ({
       text: tweetText,
       source: source.fullName,
     }));

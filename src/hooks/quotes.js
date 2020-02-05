@@ -1,22 +1,10 @@
 import { useState, useEffect } from 'react';
-import { getFuturama, getFuturamaWithSource } from '../services/getQuote';
+import { getMarkovWithSource } from '../services/getQuote';
 
-export const useQuotes = () => {
-  const [quote, setQuote] = useState({});
 
-  useEffect(() => {
-    getNewQuote();
-  }, []);
-
-  const getNewQuote = () => {
-    getFuturama()
-      .then(newQuote => setQuote(newQuote));
-  };
-
-  return { quote, getNewQuote };
-};
 
 export const useSourceQuotes = (source) => {
+  // eslint-disable-next-line no-unused-vars
   const [currentSource, setCurrentSource] = useState(source);
   const [sourceQuote, setSourceQuote] = useState({});
 
@@ -25,11 +13,11 @@ export const useSourceQuotes = (source) => {
   }, [currentSource]);
 
   const getSourceQuote = (source) => {
-    getFuturamaWithSource(source)
+    getMarkovWithSource(source)
       .then(newQuote => setSourceQuote(newQuote));
   };
 
-  return { sourceQuote, setCurrentSource };
+  return { sourceQuote, getSourceQuote };
 
 }
 

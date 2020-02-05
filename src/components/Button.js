@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Button.css';
 
 const Button = ({ onClick }) => (
-  <button onClick={onClick}>Get Quote!</button>
+  <button onClick={onClick}>Get Random Quote!</button>
 );
 
 Button.propTypes = {
