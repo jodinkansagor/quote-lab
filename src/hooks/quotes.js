@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getMarkovWithSource } from '../services/getQuote';
+import { getMarkov } from '../services/__mocks__/getQuote';
+import { getTwoQuotes } from '../services/getTwoQuotes';
 
 
 
@@ -19,3 +21,16 @@ export const useSourceQuotes = (source) => {
   return { sourceQuote, getSourceQuote };
 
 };
+
+export const useTwoQuotes = () => {
+  const [twoQuotes, setTwoQuotes] = useState([]);
+
+  const getTwo = () => {
+    getTwoQuotes()
+      .then(twoQuotes => setTwoQuotes(twoQuotes));
+  };
+
+  return { twoQuotes, getTwo };
+};
+
+
