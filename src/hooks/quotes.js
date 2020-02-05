@@ -29,7 +29,7 @@ export const useSourceQuotes = (source) => {
       .then(newQuote => setSourceQuote(newQuote));
   };
 
-  return { sourceQuote, getSourceQuote, setCurrentSource };
+  return { sourceQuote, setCurrentSource };
 
 }
 

@@ -6,12 +6,13 @@ import { useQuotes, useSourceQuotes } from '../hooks/quotes';
 import RadioButtons from '../../RadioButtons';
 
 
+
 const QuoteFetcherFN = () => {
   const { quote, getNewQuote } = useQuotes();
-  const { sourceQuote, getSourceQuote, setCurrentSource } = useSourceQuotes('5e1e4ec52d2b701b5aaf0227');
+  const { sourceQuote, setCurrentSource } = useSourceQuotes('5e1e4ec52d2b701b5aaf0227');
 
   const handleClick = () => {
-    getNewQuote();
+    setCurrentSource('');
   };
 
   const radioButtons = [
@@ -33,6 +34,7 @@ const QuoteFetcherFN = () => {
       <Quote {...sourceQuote} />
       <Button onClick={handleClick} />
       <RadioButtons radioButtons={radioButtons} onChange={changeSource} />
+      <h6>Note: Do not click on the same thing twice</h6>
     </section>
   );
 };
@@ -40,7 +42,7 @@ const QuoteFetcherFN = () => {
 export default QuoteFetcherFN;
 
 
-
+// const index = Math.floor(Math.random() * myArray.length)
 
 
 
