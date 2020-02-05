@@ -4,6 +4,6 @@ exports[`Button component matches a snapshot 1`] = `
 <button
   onClick={[Function]}
 >
-  Get Quote!
+  Get Random Quote!
 </button>
 `;
