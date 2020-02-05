@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radio from './src/components/RadioButton';
+import styles from './src/components/RadioButtons.css';
 
 const RadioButtons = ({ radioButtons, onChange }) => {
 
@@ -9,9 +10,9 @@ const RadioButtons = ({ radioButtons, onChange }) => {
   ));
 
   return (
-    <>
+    <section className={styles.radioButtons}>
       {radioButtonElements}
-    </>
+    </section>
   );
 
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './RadioButton.css';
 
 const Radio = ({ value, label, onChange }) => (
   <section>
