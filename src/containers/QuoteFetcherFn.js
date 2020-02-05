@@ -1,8 +1,7 @@
 import React from 'react';
-import Button from '../components/Button';
 import Quote from '../components/Quote';
 import styles from '../components/QuoteFetcherFN.css';
-import { useQuotes, useSourceQuotes } from '../hooks/quotes';
+import { useSourceQuotes } from '../hooks/quotes';
 import RadioButtons from '../../RadioButtons';
 
 
@@ -16,7 +15,7 @@ const QuoteFetcherFN = () => {
     { label: 'Fyodor Dostoevsky', value: '5e1e4ec52d2b701b5aaf0227' },
     { label: 'Edgar Allan Poe', value: '5e1e4ec52d2b701b5aaf0228' },
     { label: 'Lewis Carrol', value: '5e1e4ec52d2b701b5aaf0229' },
-    { label: '?', value: ' '}
+    { label: '?', value: ' ' }
   ];
 
   const changeSource = ({ target }) => {
@@ -34,7 +33,3 @@ const QuoteFetcherFN = () => {
 };
 
 export default QuoteFetcherFN;
-
-
-
-

@@ -2,6 +2,7 @@
 
 .quoteBubble {
   width: 400px;
+  height: 200px;
 
   h4 {
     font-family: 'Roboto Condensed', sans-serif

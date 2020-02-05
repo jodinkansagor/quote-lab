@@ -4,7 +4,6 @@ import { getMarkovWithSource } from '../services/getQuote';
 
 
 export const useSourceQuotes = (source) => {
-  // eslint-disable-next-line no-unused-vars
   const [currentSource, setCurrentSource] = useState(source);
   const [sourceQuote, setSourceQuote] = useState({});
 
@@ -19,7 +18,4 @@ export const useSourceQuotes = (source) => {
 
   return { sourceQuote, getSourceQuote };
 
-}
-
-
-
+};
