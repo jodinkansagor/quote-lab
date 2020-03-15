@@ -1,0 +1,21 @@
+input {
+  display: none;
+}
+
+label {
+  margin: 15px;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+input[type="radio"]+label:hover {
+  color: beige;
+  background-color: brown
+}
+
+
+input[type="radio"]+label:active {
+  color: black;
+  background-color: beige;
+
+}

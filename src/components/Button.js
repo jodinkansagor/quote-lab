@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Button.css';
+import './Button.css';
 
 const Button = ({ onClick }) => (
-  <button onClick={onClick}>Get Quote!</button>
+  <button onClick={onClick}>Get Two Random Quotes!</button>
 );
 
 Button.propTypes = {

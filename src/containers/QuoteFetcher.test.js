@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import QuoteFetcher from './QuoteFetcher';
-import { getFuturama } from '../services/getQuote';
+import { getMarkov } from '../services/getQuote';
 
 jest.mock('../services/getQuote.js');
 
@@ -16,7 +16,7 @@ describe('QuoteFetcher container', () => {
     return quoteFetcher.fetch()
 
       .then(() => {
-        expect(getFuturama).toHaveBeenCalled();
+        expect(getMarkov).toHaveBeenCalled();
         expect(wrapper.state('quote')).toEqual(
           { text: 'My Quote', source: 'My Mom' }
         );
